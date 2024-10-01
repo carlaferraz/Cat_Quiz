@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Gatinhos</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <style>
+    body {
+            background-color: #fdecef; 
+            background-image: url('img/background.jpeg'); 
+            background-repeat: repeat;
+            background-size: 400px 870px; 
+            font-family: 'Arial', sans-serif;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+    </style>
+</head>
+<body>
+
+        <div class="quiz-box">
+            <div class="quiz-header">
+                <div class="text">SE VOCÊ PUDESSE MORAR EM ALGUM DESSES LUGARES, QUAL SERIA?</div>
+                <div class="question-number">6</div>
+            </div>
+            <hr>
+            <div class="image">
+                
+                <img src="img/gatinho6.jpg" alt="Imagem do quiz">
+            </div>
+        
+            <div class="options" id="quizForm">
+                <div id="answer-buttons">
+                    <div class="option">
+                        <input type="radio" class="btn" name="answer" value="azulrusso">A. Castelo.
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="btn" name="answer" value="siames">B. Fazenda.
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="btn" name="answer" value="mainecoon">C. Caverna. 
+                    </div>
+                    <div class="option">
+                        <input type="radio" class="btn" name="answer" value="persa">D. Floresta. 
+                    </div>
+                </div>
+                
+            </div>
+            <div class="d-flex justify-content-end mt-4">
+                <div class="button">
+                    <button class="button" onclick="nextPage(6)">Avançar</button>
+                </div>
+                
+            </div>
+    
+    </div>
+    
+
+     <!--SCRIPT DO BOOTSTRAP E JS-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+     
+    <script src="js/script.js"></script>
+    
+</body>
+</html>

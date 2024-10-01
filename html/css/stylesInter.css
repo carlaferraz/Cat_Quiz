@@ -1,0 +1,103 @@
+
+        body {
+            background-color: #fdecef; 
+            background-image: url('img/background.jpeg'); 
+            background-repeat: repeat;
+            background-size: 400px 870px; 
+            font-family: 'Arial', sans-serif;
+            display: flex;
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh;
+            margin: 0; 
+        }
+
+        .quiz-container {
+            background-color: #fffbe4; 
+            border: 2px solid #737171;
+            border-radius: 15px;
+            padding: 30px;
+            max-width: 800px;
+            width: 100%;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+            position: relative;
+            text-align: center; 
+        }
+
+        .quiz-header {
+            background-color: #f8c3c3;
+            border: 2px solid #737171;
+            border-radius: 15px 15px 0 0;
+            padding: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .quiz-header .icon {
+            background-color: #f8c3c3; 
+            border-radius: 5px;
+            padding: 5px 10px;
+            margin-right: 10px;
+        }
+
+        .quiz-title {
+            flex-grow: 1;
+            text-align: center;
+            font-size: 30px;
+            font-weight: bold;
+            color: #d04e4e;
+        }
+
+        .quiz-content {
+            padding: 40px 20px;
+        }
+
+        .quiz-content h1 {
+            font-size: 28px;
+            color: #d04e4e;
+            font-weight: bold;
+            margin-bottom: 30px;
+        }
+
+        .quiz-content img {
+            width: 100px;
+            margin-top: 20px;
+        }
+
+        .btn-container {
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            margin-top: 20px;
+            position: relative;
+        }
+
+        .button {
+            background-color: #d04e4e;
+            color: #ffffff;
+            font-size: 18px;
+            padding: 10px 20px;
+            border-radius: 25px;
+            border: none;
+            text-decoration: none; 
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .button:hover {
+            background-color: #f8c3c3;
+            color: #d04e4e; 
+        }
+
+        .image-container {
+            position: absolute; 
+            right: -30px; 
+            bottom: -112px;
+        }
+
+        .image-container img {
+            width: 200px;
+            height: 200px;
+            bottom: px;
+        }
+    

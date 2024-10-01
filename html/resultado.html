@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/stylesResult.css">
+    <script src="js/script.js" defer></script>
+    <style>
+        body {
+            background-color: #fdecef; 
+            background-image: url('img/background.jpeg'); 
+            background-repeat: repeat;
+            background-size: 400px 870px; 
+            font-size: 16px;
+            font-family: 'Arial', sans-serif; 
+            font-weight: 500; 
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+    </style>
+</head>
+<body>
+
+    <audio id="background-music" autoplay loop>
+        <source src="img/audioresultado.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+
+
+    <div class="quiz-container">
+        <div class="quiz-header">
+            <div class="icon">
+                <span>🤍</span>
+            </div>
+            <div class="quiz-title">RESULTADO</div>
+            <div class="icon">
+                <span>🤍</span>
+            </div>
+        </div>
+
+        <div class="quiz-content">
+            <h1 id="resultado-titulo"></h1>
+            <img id="resultado-imagem" src="" alt="Imagem do quiz">
+            <p id="resultado-descricao"></p>
+
+            <div class="btn-container">
+                <a href="interface.html" class="button">Novamente</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.6.0/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+     
+        const urlParams = new URLSearchParams(window.location.search);
+        const resultado = urlParams.get('resultado');
+
+       
+        let titulo, imagem, descricao;
+
+        switch (resultado) {
+            case 'azulrusso':
+                titulo = "VOCÊ SERIA UM AZUL RUSSO!";
+                imagem = "img/kenny.jpeg"; 
+                descricao = "Este é um gatinho Azul Russo!<br> Eles são conhecidos por sua elegância e pelagem azul-prateada. Azul Russos são gatos reservados, inteligentes e extremamente leais. Se você aprecia momentos de tranquilidade, gosta de um ambiente calmo e valoriza uma conexão especial com seu pet, você se identifica com este gatinho!";
+                break;
+            case 'siames':
+                titulo = "VOCÊ SERIA UM SIAMES!";
+                imagem = "img/siames.jpg";
+                descricao = "Este é um gatinho Siamês!<br> Eles são conhecidos por serem extremamente comunicativos e inteligentes. Siamêses são sociáveis, curiosos e gostam de estar próximos das pessoas. Se você é extrovertido, adora conversar e tem um espírito aventureiro, então você se identifica com este gatinho!";
+                break;
+            case 'mainecoon':
+                titulo = "VOCÊ SERIA UM MAINE COON!";
+                imagem = "img/mainecoon.jpg"; 
+                descricao = "Este é um gatinho Maine Coon!<br> Eles são conhecidos por seu tamanho impressionante e personalidade amigável. Maine Coons são gatos carinhosos, adaptáveis e muito brincalhões. Se você gosta de aventuras ao ar livre, é sociável e tem um grande coração, você se identifica com este gatinho!";
+                break;
+            case 'persa':
+                titulo = "VOCÊ SERIA UM PERSA!";
+                imagem = "img/persa.jeg"; 
+                descricao = "Este é um gatinho Persa!<br>Eles são conhecidos por sua aparência majestosa, com pelagem longa e olhos grandes. Persas são gatos tranquilos, afetuosos e adoram ambientes confortáveis. Se você gosta de uma vida calma e aprecia os pequenos luxos do dia a dia, você se identifica com este gatinho!";
+                break;
+            default:
+                titulo = "RESULTADO DESCONHECIDO";
+                imagem = "img/gatinho3.jpg"; 
+                descricao = "Desculpe, não conseguimos determinar seu resultado. Tente novamente!";
+                break;
+        }
+
+   
+        document.getElementById('resultado-titulo').innerText = titulo;
+        document.getElementById('resultado-imagem').src = imagem;
+        document.getElementById('resultado-descricao').innerHTML = descricao;
+    </script>
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="js/script.js" defer></script>
+    <style> 
+        body {
+            background-color: #fdecef; 
+            background-image: url('img/background.jpeg'); 
+            background-repeat: repeat;
+            background-size: 400px 870px; 
+            font-family: 'Arial', sans-serif;
+            display: flex; 
+            justify-content: center; 
+            align-items: center; 
+            height: 100vh; 
+            margin: 0; 
+        }
+
+        body {
+    background-color: #fdecef;
+    background-image: url('img/background.jpeg');
+    background-repeat: repeat;
+    background-size: 400px 870px;
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center; 
+    align-items: center; 
+    height: 100vh; 
+    margin: 0; 
+} 
+
+        .quiz-box {
+            display: none;
+        }
+
+        .quiz-box.active {
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+
+
+    <audio id="background-music" autoplay loop>
+        <source src="img/audio.mp3" type="audio/mpeg">
+        Seu navegador não suporta o elemento de áudio.
+    </audio>
+
+
+
+
+
+    <!--PERGUNTA 1-->
+    <div class="quiz-box active" id="pergunta1">
+        <div class="quiz-header">
+            <h2>VOCÊ SE CONSIDERA UMA PESSOA:</h2>
+            <div class="question-number">1</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho1.jpg" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q1" value="azulrusso"> A. Preguiçosa.
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" value="siames"> B. Inteligente.
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" value="mainecoon"> C. Animada.
+            </div>
+            <div class="option">
+                <input type="radio" name="q1" value="persa"> D. Mal humorada.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(1)">Avançar</button>
+    </div>
+
+    
+
+    <!--PERGUNTA 2-->
+    <div class="quiz-box" id="pergunta2">
+        <div class="quiz-header">
+            <h2>O QUE VOCÊ GOSTA DE FAZER NO SEU TEMPO LIVRE?</h2>
+            <div class="question-number">2</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho2.jpg" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q2" value="azulrusso"> A. Ficar em casa.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="siames"> B. Praticar atividade física.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="mainecoon"> C. Tempo com família.
+            </div>
+            <div class="option">
+                <input type="radio" name="q2" value="persa"> D. Sair com amigos.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(2)">Avançar</button>
+    </div>
+
+    <!--PERGUNTA 3-->
+    <div class="quiz-box" id="pergunta3">
+        <div class="quiz-header">
+            <h2>QUAL A SUA ESTAÇÃO FAVORITA DO ANO?</h2>
+            <div class="question-number">3</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho3.jpg" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q3" value="azulrusso"> A. Primavera.
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="siames"> B. Verão.
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="mainecoon"> C. Outono.
+            </div>
+            <div class="option">
+                <input type="radio" name="q3" value="persa"> D. Inverno.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(3)">Avançar</button>
+    </div>
+
+    <!--PERGUNTA 4-->
+    <div class="quiz-box" id="pergunta4">
+        <div class="quiz-header">
+            <h2>QUAL DESSES LUGARES VOCÊ GOSTA DE FREQUENTAR?</h2>
+            <div class="question-number">4</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho4.jpg" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q4" value="azulrusso"> A. Academia.
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" value="siames"> B. Parques ao ar livre.
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" value="mainecoon"> C. Baladas.
+            </div>
+            <div class="option">
+                <input type="radio" name="q4" value="persa"> D. Shoppings.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(4)">Avançar</button>
+    </div>
+
+    <!-- PERGUNTA 5-->
+    <div class="quiz-box" id="pergunta5">
+        <div class="quiz-header">
+            <h2>SE VOCÊ TIVESSE QUE ESCOLHER UMA COMIDA <br> PARA COMER PELO RESTO DA VIDA, QUAL SERIA?</h2>
+            <div class="question-number">5</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho5.png" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q5" value="azulrusso"> A. Pizza.
+            </div>
+            <div class="option">
+                <input type="radio" name="q5" value="siames"> B. Hamburguer.
+            </div>
+            <div class="option">
+                <input type="radio" name="q5" value="mainecoon"> C. Sushi.
+            </div>
+            <div class="option">
+                <input type="radio" name="q5" value="persa"> D. Massas.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(5)">Avançar</button>
+    </div>
+
+    <!--PERGUNTA 6-->
+    <div class="quiz-box" id="pergunta6">
+        <div class="quiz-header">
+            <h2>SE VOCÊ PUDESSE MORAR EM ALGUM DESSES LUGARES, QUAL SERIA?</h2>
+            <div class="question-number">6</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho6.jpg" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q6" value="azulrusso"> A. Castelo.
+            </div>
+            <div class="option">
+                <input type="radio" name="q6" value="siames"> B. Fazenda.
+            </div>
+            <div class="option">
+                <input type="radio" name="q6" value="mainecoon"> C. Caverna.
+            </div>
+            <div class="option">
+                <input type="radio" name="q6" value="persa"> D. Floresta.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(6)">Avançar</button>
+    </div>
+
+    <!--PERGUNTA 7-->
+    <div class="quiz-box" id="pergunta7">
+        <div class="quiz-header">
+            <h2>E POR FIM, QUAL DESSAS CORES É SUA FAVORITA?</h2>
+            <div class="question-number">7</div>
+        </div>
+        <hr>
+        <div class="image">
+            <img src="img/gatinho7.jpg" alt="Imagem do quiz">
+        </div>
+        <div class="options">
+            <div class="option">
+                <input type="radio" name="q7" value="azulrusso"> A. Preto.
+            </div>
+            <div class="option">
+                <input type="radio" name="q7" value="siames"> B. Azul.
+            </div>
+            <div class="option">
+                <input type="radio" name="q7" value="mainecoon"> C. Rosa.
+            </div>
+            <div class="option">
+                <input type="radio" name="q7" value="persa"> D. Verde.
+            </div>
+        </div>
+        <button class="button" onclick="nextQuestion(7)">Ver Resultado</button>
+    </div>
+
+</body>
+</html>
